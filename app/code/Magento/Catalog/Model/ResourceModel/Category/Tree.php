@@ -170,6 +170,7 @@ class Tree extends Dbp
      * @param array $exclude
      * @param boolean $toLoad
      * @param boolean $onlyActive
+     * @param boolean $onlyIncludeInMenu
      * @return $this
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      * @SuppressWarnings(PHPMD.NPathComplexity)
@@ -179,7 +180,8 @@ class Tree extends Dbp
         $sorted = false,
         $exclude = [],
         $toLoad = true,
-        $onlyActive = false
+        $onlyActive = false,
+        $onlyIncludeInMenu = false
     ) {
         if ($collection === null) {
             $collection = $this->getCollection($sorted);
